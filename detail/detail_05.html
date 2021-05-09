@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Portfolio | DETAILS</title>
+        <meta name="description" content="Portfolio | 作品詳細">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="https://kit.fontawesome.com/70d18a5d5a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
+    </head>
+    <body class="details">
+        <script type="text/javascript">
+            $(function () {
+                $(".animsition").animsition();
+            });
+        </script>
+        <header class="header">
+            <div class="header-menu">
+                <h1><a href="../index.html">PORTFOLIO</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="../about/index.html">ABOUT</a></li>
+                        <li><a href="../index.html">WORKS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>   
+        <main class="animsition">
+            <article class="works-description" data-animsition-out-class="fade-out">
+                <div class="detail-top">
+                    <section class="siema">
+                        <p class="works-img"><img src="../img/details/works_05_01.png"></p>
+                        <p class="works-img"><img src="../img/details/works_05_02.png"></p>
+                    </section>
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>       
+                    <script src="siema.min.js"></script>
+                    <script>                    
+                        const mySiema = new Siema({
+                            selector: '.siema',
+                            duration: 200,
+                            easing: 'ease-in',
+                            perPage: 1,
+                            startIndex: 0,
+                            draggable: false,
+                            multipleDrag: true,
+                            threshold: 10,
+                            loop: true,
+                            rtl: false,
+                            onInit: () => {},
+                            onChange: () => {},
+                        });
+                        setInterval(() => mySiema.next(), 10000);
+                        document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
+                        document.querySelector('.next').addEventListener('click',() => mySiema.next());
+                    </script>
+                </div>                
+                <section>
+                    <h3>社内向けマニュアル作成</h3>
+                    <h4>ターゲット</h4>
+                    <p class="detail-txt">社内製品組立作業者</p>
+                </section>
+                <section>
+                    <h4>目的</h4>
+                    <p class="detail-txt">電子帳票ソリューションサービスi-Reporterの社内展開・基本操作方法の周知</p>
+                </section>
+                <section>
+                    <h4>担当</h4>
+                    <p class="detail-txt">製作全般（約20ページ・PDFにて発行）</p>
+                </section>
+                <section>
+                    <h4>使用ツール</h4>
+                    <p class="detail-txt">Illustrator／Photoshop</p>
+                </section>
+                <section>
+                    <h4>製作期間</h4>
+                    <p class="detail-txt">1週間程度</p>
+                </section>
+                <section>
+                    <h4>製作について</h4>
+                    <p class="detail-txt">ターゲットの年齢層が広く、iPadやPCなど、デジタル機器の業務内での取り扱いに慣れていない人も多い中、
+                    サービスを社内に広く展開していく必要があったため、分かりやすさ・伝わりやすさを意識して製作した。
+                    <br>何度も手順を追いながら、自分は当たり前のこととしてスキップしてしまっている手順がないか確認し、画面遷移や入力内容が分かるようこまめに画像や図を挿入した。</p>
+                </section>
+            </article>
+            <section class="move">
+                <ul>
+                    <li><a href="detail_03.html">前へ</a></li>
+                    <li><a href="../index.html">作品TOPへ</a></li>
+                    <li><a href="detail_06.html">次へ</a></li>
+                </ul>
+            </section>           
+        </main>
+        <footer class="foot-area">　
+            <p class="footer-txt">&copy;2021 Haru koda.</p>        
+        </footer>
+    </body>
+</html>
