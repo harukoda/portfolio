@@ -32,25 +32,61 @@
         </header>   
         <main class="animsition">
             <article class="works-description" data-animsition-out-class="fade-out">
+                <div class="detail-top">
+                    <section class="siema">
+                        <p class="works-img"><img src="../img/details/works_15_01.png"></p>
+                        <p class="works-img"><img src="../img/details/works_15_02.png"></p>
+                        <p class="works-img"><img src="../img/details/works_15_03.png"></p>
+                    </section>
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>       
+                    <script src="siema.min.js"></script>
+                    <script>                    
+                        const mySiema = new Siema({
+                            selector: '.siema',
+                            duration: 200,
+                            easing: 'ease-in',
+                            perPage: 1,
+                            startIndex: 0,
+                            draggable: false,
+                            multipleDrag: true,
+                            threshold: 10,
+                            loop: true,
+                            rtl: false,
+                            onInit: () => {},
+                            onChange: () => {},
+                        });
+                        setInterval(() => mySiema.next(), 10000);
+                        document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
+                        document.querySelector('.next').addEventListener('click',() => mySiema.next());
+                    </script>
+                </div>
                 <section>
-                    <p class="works-img"><img src="../img/details/works_15.png"></p>
+                    <h3>ラッピングペーパーのデザイン-2</h3>
+                    <h4>ターゲット</h4>
+                    <p class="detail-txt">個人的な親友2人</p>
                 </section>
                 <section>
-                    <h3>商品試食用POP作成</h3>
-                    <h4>ターゲット</h4>
-                    <p class="detail-txt">お土産屋さんを訪れる観光客</p>
+                    <h4>目的</h4>
+                    <p class="detail-txt">誕生日祝い</p>
+                </section>
+                <section>
+                    <h4>使用ツール</h4>
+                    <p class="detail-txt">Illustrator</p>
                 </section>
                 <section>
                     <h4>製作について</h4>
-                    <p class="detail-txt">学生時代、当時アルバイトをしていた中華街のお土産屋さんのお菓子の試食用にPOPを作成した。
-                    <br>それぞれ商品のパッケージのデザインから着想を得て、限られたスペース内で手に取る人に何の試食なのかを伝えるとともに、商品自体にも興味を持ってもらえるよう意識して製作した。</p>
+                    <p class="detail-txt">学生時代、誕生日が連続する親友2人の当時22歳の誕生日プレゼントのために包装紙をデザインした。
+                    <br>前向きな意味とそのまま年齢の意味を込めてピースサインを散りばめたパターンにした。
+                    <br>名前を入れた部分は共通項の多い友人達であること、誕生日が連続することの類似性やお揃い感を意識した。
+                    <br>合わせてそれぞれの好きな色で名前の刺繍を施したトートバッグも贈った。</p>
                 </section>
             </article>
             <section class="move">
                 <ul>
                     <li><a href="detail_14.html">前へ</a></li>
                     <li><a href="../index.html">作品TOPへ</a></li>
-                    <li></li>
+                    <li><a href="detail_16.html">次へ</a></li>
                 </ul>
             </section>
         </main>

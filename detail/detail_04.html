@@ -32,26 +32,61 @@
         </header>   
         <main class="animsition">
             <article class="works-description" data-animsition-out-class="fade-out">
+                <div class="detail-top">
+                    <section class="siema">
+                        <p class="works-img"><img src="../img/details/works_04_01.png"></p>
+                        <p class="works-img"><img src="../img/details/works_04_02.png"></p>
+                        <p class="works-img"><img src="../img/details/works_04_03.png"></p>
+                        <p class="works-img"><img src="../img/details/works_04_04.png"></p>
+                        <p class="works-img"><img src="../img/details/works_04_05.png"></p>
+                        <p class="works-img"><img src="../img/details/works_04_06.png"></p>
+                        <p class="works-img"><img src="../img/details/works_04_07.png"></p>
+                    </section>
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>       
+                    <script src="siema.min.js"></script>
+                    <script>                    
+                        const mySiema = new Siema({
+                            selector: '.siema',
+                            duration: 200,
+                            easing: 'ease-in',
+                            perPage: 1,
+                            startIndex: 0,
+                            draggable: false,
+                            multipleDrag: true,
+                            threshold: 10,
+                            loop: true,
+                            rtl: false,
+                            onInit: () => {},
+                            onChange: () => {},
+                        });
+                        setInterval(() => mySiema.next(), 10000);
+                        document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
+                        document.querySelector('.next').addEventListener('click',() => mySiema.next());
+                    </script>
+                </div>
                 <section>
-                    <p class="works-img"><img src="../img/details/works_04.png"></p>
-                </section>                
-                <section>
-                    <h3>社内掲示物（社内システム紹介ポスター</h3>
-                    <h4>ターゲット</h4>
-                    <p class="detail-txt">社内従業員・来訪者</p>
+                    <h3>社内デジタルサイネージシステム開発・画面制作</h3>
                 </section>
                 <section>
-                    <h4>使用ツール</h4>
-                    <p class="detail-txt">Illustrator</p>
+                    <h4>担当</h4>
+                    <p class="detail-txt">プログラミング・画面デザイン制作
+                    </p>
+                </section>
+                <section>
+                    <h4>使用ツール・言語</h4>
+                    <p class="detail-txt">HTML／CSS／JavaScript／PHP／Excel VBA／Illustrator</p>
                 </section>
                 <section>
                     <h4>製作期間</h4>
-                    <p class="detail-txt">約1週間</p>
+                    <p class="detail-txt">1ヶ月</p>
                 </section>
                 <section>
                     <h4>製作について</h4>
-                    <p class="detail-txt">システム導入による効果を十分にアピールできるよう、導入前に抱えていた課題についても内容に取り入れた。
-                    <br>初見の人でもシステムの特徴や効果をイメージしやすいよう、イラスト素材を選定し配置した。
+                    <p class="detail-txt">社内及び社外拠点での情報共有のためデジタルサイネージシステムの開発に取り組んだ。
+                    <br>Web開発言語とExcel VBA・社内Webサーバーを活用し、当初導入予定だった市販機器（1台あたり約20万円）と比べ、1台あたりの導入コストを約1／3以下に抑えることに成功した。
+                    エリア毎に表示させたい内容をヒアリングし、画面を構成した。
+                    <br>来客の際エントランスで表示するウェルカムボード的画面については、テンプレートをIllustratorで作成し、流用できるようPowerPoint形式に変換し展開した。
                     </p>
                 </section>
             </article>
