@@ -32,39 +32,70 @@
         </header>   
         <main class="animsition">
             <article class="works-description" data-animsition-out-class="fade-out">
+                <div class="detail-top">
+                    <section class="siema">
+                        <p class="works-img"><img src="../img/details/works_13_01.png"></p>
+                        <p class="works-img"><img src="../img/details/works_13_02.png"></p>
+                        <p class="works-img"><img src="../img/details/works_13_03.png"></p>
+                    </section>
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>       
+                    <script src="siema.min.js"></script>
+                    <script>                    
+                        const mySiema = new Siema({
+                            selector: '.siema',
+                            duration: 200,
+                            easing: 'ease-in',
+                            perPage: 1,
+                            startIndex: 0,
+                            draggable: false,
+                            multipleDrag: true,
+                            threshold: 10,
+                            loop: true,
+                            rtl: false,
+                            onInit: () => {},
+                            onChange: () => {},
+                        });
+                        setInterval(() => mySiema.next(), 10000);
+                        document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
+                        document.querySelector('.next').addEventListener('click',() => mySiema.next());
+                    </script>
+                </div>
+                <!-- <section>
+                    <p class="works-img"><img src="../../img/details/works_03.png"></p>
+                </section>                 -->
                 <section>
-                    <p class="works-img"><img src="../img/details/works_13.png"></p>
+                    <h3>企業ロゴ・ホームページ製作（未公開）</h3>
                 </section>
                 <section>
-                    <h3>趣味-6・作字</h3>
+                    <h4>担当</h4>
+                    <p class="detail-txt">ロゴデザイン・サイトデザイン・コーディング</p>
                 </section>
                 <section>
-                    <h4>使用ツール</h4>
-                    <p class="detail-txt">Illustrator</p>
+                    <h4>使用ツール・言語</h4>
+                    <p class="detail-txt">Illustrator／XD／HTML／CSS／JavaScript</p>
                 </section>
                 <section>
-                    <h4>製作期間</h4>
-                    <p class="detail-txt">4時間</p>
+                    <h4>制作期間</h4>
+                    <p class="detail-txt">2週間程度</p>
                 </section>
                 <section>
-                    <h4>製作について</h4>
-                    <p class="detail-txt">Illustratorの操作に慣れるため空き時間などに取り組んでいる作字の１つ。
-                    <br>その時の気分や目についた文字列からスケッチを起こして製作している。
-                    <br>文言は太宰治の同名作品から採用した（丁度読み返していたため）。
-                    <br>独特なセンスのおしゃれを希求し周囲からズレていき空回りする主人公を意識した。
+                    <h4>制作について</h4>
+                    <p class="detail-txt">知人が起業する（予定の）企業ロゴのデザインとホームページの作成依頼を受けて取り組んだ。
+                    <br>ロゴは人との繋がりをキーワードに、会社名の文字列及びそこから連想されるモチーフ（繋がり＝リンクのマーク）をイメージしてデザインを行った。
                     </p>
                 </section>
             </article>
             <section class="move">
                 <ul>
-                    <li><a href="detail_12.html">前へ</a></li>
+                    <li><a href="detail_14.html">前へ</a></li>
                     <li><a href="../index.html">作品TOPへ</a></li>
-                    <li><a href="detail_14.html">次へ</a></li>
+                    <li><a href="detail_12.html">次へ</a></li>
                 </ul>
-            </section>
+            </section>           
         </main>
         <footer class="foot-area">　
-            <p class="footer-txt">&copy;2021 Haru koda.</p>        
+            <p class="footer-txt">&copy;2022 Haru koda.</p>        
         </footer>
     </body>
 </html>

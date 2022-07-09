@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Portfolio | DETAILS</title>
+        <meta name="description" content="Portfolio | 作品詳細">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="https://kit.fontawesome.com/70d18a5d5a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css">
+        <link rel="shortcut icon" href="../img/favicon/favicon.ico">
+        <link rel="apple-touch-icon" href="../img/favicon/apple-touch-icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
+    </head>
+    <body class="details">
+        <script type="text/javascript">
+            $(function () {
+                $(".animsition").animsition();
+            });
+        </script>
+        <header class="header">
+            <div class="header-menu">
+                <h1><a href="../index.html">PORTFOLIO</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="../about/index.html">ABOUT</a></li>
+                        <li><a href="../index.html">WORKS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>   
+        <main class="animsition">
+            <article class="works-description" data-animsition-out-class="fade-out">
+                <div class="detail-top">
+                    <section class="siema">
+                        <p class="works-img"><img src="../img/details/works_17_01.png"></p>
+                        <p class="works-img"><img src="../img/details/works_17_02.png"></p>
+                        <p class="works-img"><img src="../img/details/works_17_03.png"></p>
+                        <p class="works-img"><img src="../img/details/works_17_04.png"></p>
+                    </section>
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>       
+                    <script src="siema.min.js"></script>
+                    <script>                    
+                        const mySiema = new Siema({
+                            selector: '.siema',
+                            duration: 200,
+                            easing: 'ease-in',
+                            perPage: 1,
+                            startIndex: 0,
+                            draggable: false,
+                            multipleDrag: true,
+                            threshold: 10,
+                            loop: true,
+                            rtl: false,
+                            onInit: () => {},
+                            onChange: () => {},
+                        });
+                        setInterval(() => mySiema.next(), 10000);
+                        document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
+                        document.querySelector('.next').addEventListener('click',() => mySiema.next());
+                    </script>
+                </div>                
+                <section>
+                    <h3>Amazon商品画像-PCスタンド-</h3>
+                    <h4>ターゲット</h4>
+                    <p class="detail-txt">当該商品購入検討者</p>
+                </section>
+                <section>
+                    <h4>目的</h4>
+                    <p class="detail-txt">購入検討者に商品の概要や特長・機能を伝える。</p>
+                </section>
+                <section>
+                    <h4>担当</h4>
+                    <p class="detail-txt">商品写真撮影・画像加工・作成</p>
+                </section>
+                <section>
+                    <h4>使用ツール</h4>
+                    <p class="detail-txt">Illustrator／Photoshop</p>
+                </section>
+                <section>
+                    <h4>制作期間</h4>
+                    <p class="detail-txt">1週間程度</p>
+                </section>
+                <section>
+                    <h4>制作について</h4>
+                    <p class="detail-txt">インスタグラムでの広告展開も意識したレイアウトで、類似の商品との差別化を図った。
+                    <br>画像一枚あたりの情報量が多くなりすぎないよう調整しながら制作を進めた。</p>
+                </section>
+            </article>
+            <section class="move">
+                <ul>
+                    <li><a href="detail_18.html">前へ</a></li>
+                    <li><a href="../index.html">作品TOPへ</a></li>
+                    <li><a href="detail_16.html">次へ</a></li>
+                </ul>
+            </section>           
+        </main>
+        <footer class="foot-area">　
+            <p class="footer-txt">&copy;2022 Haru koda.</p>        
+        </footer>
+    </body>
+</html>

@@ -32,37 +32,74 @@
         </header>   
         <main class="animsition">
             <article class="works-description" data-animsition-out-class="fade-out">
+                <div class="detail-top">
+                    <section class="siema">
+                        <p class="works-img"><img src="../img/details/works_12_01.png"></p>
+                        <p class="works-img"><img src="../img/details/works_12_02.png"></p>
+                        <p class="works-img"><img src="../img/details/works_12_03.png"></p>
+                        <p class="works-img"><img src="../img/details/works_12_04.png"></p>
+                        <p class="works-img"><img src="../img/details/works_12_05.png"></p>
+                        <p class="works-img"><img src="../img/details/works_12_06.png"></p>
+                        <p class="works-img"><img src="../img/details/works_12_07.png"></p>
+                    </section>
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>       
+                    <script src="siema.min.js"></script>
+                    <script>                    
+                        const mySiema = new Siema({
+                            selector: '.siema',
+                            duration: 200,
+                            easing: 'ease-in',
+                            perPage: 1,
+                            startIndex: 0,
+                            draggable: false,
+                            multipleDrag: true,
+                            threshold: 10,
+                            loop: true,
+                            rtl: false,
+                            onInit: () => {},
+                            onChange: () => {},
+                        });
+                        setInterval(() => mySiema.next(), 10000);
+                        document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
+                        document.querySelector('.next').addEventListener('click',() => mySiema.next());
+                    </script>
+                </div>
                 <section>
-                    <p class="works-img"><img src="../img/details/works_12.png"></p>
+                    <h3>社内デジタルサイネージシステム開発</h3>
                 </section>
                 <section>
-                    <h3>趣味-5・作字</h3>
+                    <h4>担当</h4>
+                    <p class="detail-txt">プログラミング・画面デザイン制作
+                    </p>
                 </section>
                 <section>
-                    <h4>使用ツール</h4>
-                    <p class="detail-txt">Illustrator</p>
+                    <h4>使用ツール・言語</h4>
+                    <p class="detail-txt">HTML／CSS／JavaScript／PHP／Excel VBA／Illustrator</p>
                 </section>
                 <section>
-                    <h4>製作期間</h4>
-                    <p class="detail-txt">2時間</p>
+                    <h4>制作期間</h4>
+                    <p class="detail-txt">1ヶ月</p>
                 </section>
                 <section>
-                    <h4>製作について</h4>
-                    <p class="detail-txt">Illustratorの操作に慣れるため空き時間などに取り組んでいる作字の１つ。
-                    <br>その時の気分や目についた文字列からスケッチを起こして製作している。
+                    <h4>制作について</h4>
+                    <p class="detail-txt">社内及び社外拠点での情報共有のためデジタルサイネージシステムの開発に取り組んだ。
+                    <br>Web開発言語とExcel VBA・社内Webサーバーを活用し、当初導入予定だった市販機器（1台あたり約20万円）と比べ、1台あたりの導入コストを約1／3以下に抑えることに成功した。
+                    エリア毎に表示させたい内容をヒアリングし、画面を構成した。
+                    <br>来客の際エントランスで表示するウェルカムボード的画面については、テンプレートをIllustratorで作成し、流用できるようPowerPoint形式に変換し展開した。
                     </p>
                 </section>
             </article>
             <section class="move">
                 <ul>
-                    <li><a href="detail_11.html">前へ</a></li>
+                    <li><a href="detail_13.html">前へ</a></li>
                     <li><a href="../index.html">作品TOPへ</a></li>
-                    <li><a href="detail_13.html">次へ</a></li>
+                    <li><a href="detail_11.html">次へ</a></li>
                 </ul>
-            </section>
+            </section>           
         </main>
         <footer class="foot-area">　
-            <p class="footer-txt">&copy;2021 Haru koda.</p>        
+            <p class="footer-txt">&copy;2022 Haru koda.</p>        
         </footer>
     </body>
 </html>
